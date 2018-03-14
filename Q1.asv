@@ -28,6 +28,7 @@ for i=1:n
     results (i,5:8) = Qt(3,:);
 end
 
-results(n,:) 
+results(n,:)
+interations(1:
 plot(
 figure;
