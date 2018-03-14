@@ -20,14 +20,18 @@ end
 
 Q
 Qt = eye(4);
-n = 10;
+n = 30;
+
+%Les 4 premières colonnes avec départ aléatoire, les 4 suivantes
+%départ en c
 results = zeros(n,8);
 for i=1:n
     Qt = Qt * Q;
     results (i,1:4) = Qt(randi([1 4]),:);
     results (i,5:8) = Qt(3,:);
 end
-
-results(n,:) 
-plot(
-figure;
+for i=1:8
+hold;
+plot(1:n,results(:,i));
+hold;
+end
