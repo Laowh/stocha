@@ -35,4 +35,15 @@ end
 %Q1.1.3
 distr_statio = Qt(1,:);
 
-plot(results);
+subplot(2,1,1);
+plot(results(:,1:4));
+title('Probabilité d''apparition d''une lettre en position t avec départ aléatoire'); 
+ylabel('Probabilité');
+xlabel('Position t');
+legend('A', 'B', 'C', 'D');
+subplot(2,1,2);
+plot(results(:,5:8));
+title('Probabilité d''apparition d''une lettre en position t avec départ en C')
+ylabel('Probabilité');
+xlabel('Position t');
+legend('A', 'B', 'C', 'D');

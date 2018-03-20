@@ -15,3 +15,7 @@ for i = 2:T
 end
 
 plot(history);
+legend('A', 'B', 'C', 'D');
+title('Pourcentage d''apparition des différentes lettres sur une chaine de longueur T')
+ylabel('Pourcentage d''apparition');
+xlabel('Longueur de chaine T');
