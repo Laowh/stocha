@@ -30,8 +30,9 @@ for i=1:n
     results (i,1:4) = Qt(randi([1 4]),:);
     results (i,5:8) = Qt(3,:);
 end
+distr_statio = Qt(1,:);
 for i=1:8
-hold;
+hold
 plot(1:n,results(:,i));
-hold;
+hold
 end
