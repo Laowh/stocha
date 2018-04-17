@@ -33,16 +33,16 @@ seq = seq(1:20);
 
 
 p = 1/factorial(40);
-vraisemb = -Inf;
-
-while(vraisemb < -100 )
+vraisemb = Inf;
+permutation = alphabet(randperm(40));
+while(vraisemb > 110)
     
-    permutation = alphabet(randperm(40));
-    translation = transmute (seq, permutation, alphabet);
-    vraisemb = vraisemblance(translation,alphabet,pinit,Q);
+    permutation_next = alphabet(randperm(40));
+    translation_next = transmute (seq, permutation, alphabet);
+    vraisemb_next = vraisemblance(translation,alphabet,pinit,Q);
     
 end
 
-permutation
+permutation;
 translation
 vraisemb
