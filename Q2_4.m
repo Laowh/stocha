@@ -35,7 +35,7 @@ seq = seq(1:20);
 p = 1/factorial(40);
 vraisemb = -Inf;
 permutation = alphabet(randperm(40));
-while(vraisemb < -110)
+while(vraisemb < -90)
     
     permutation_next = alphabet(randperm(40));
     translation_next = transmute (seq, permutation_next, alphabet);
