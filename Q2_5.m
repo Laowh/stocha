@@ -1,12 +1,12 @@
 seq2;
-seq = seq(1:80);
+seq = seq(1:120);
 tic;
 
 p = 1/factorial(40);
 vraisemb = -Inf;
 permutation = alphabet(randperm(40));
 
-while(vraisemb < -500)
+while(vraisemb < -1000)
     
     permutation_next = alphabet(randperm(40));
     %translation_next = transmute (seq, permutation_next, alphabet);
@@ -19,7 +19,7 @@ while(vraisemb < -500)
     end
     
 end
-it = 2000000;
+it = 5000000;
 Tab_vraisemblance = [vraisemb];
 while(it > 0)
    permutation_next = exchange (permutation, randi(40), randi(40)) ;
