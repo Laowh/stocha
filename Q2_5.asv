@@ -26,11 +26,7 @@ while(vraisemb < -1000)
 end
 %Nombre d'itérations
 it = 5000000;
-
-%Données pour le graph
 Tab_vraisemblance = [vraisemb];
-
-%Fait des permutations aléatoires dans le code et si meilleure vraisemblance on garde
 while(it > 0)
    permutation_next = exchange (permutation, randi(40), randi(40)) ;
    %translation_next = transmute (seq, permutation_next, alphabet);

@@ -8,14 +8,11 @@ permutation = alphabet(randperm(40));
 
 %Permutation est une manière de coder le texte
 while(vraisemb < -90)
-    %Tire une permutation au hasard
+    %
     permutation_next = alphabet(randperm(40));
-    %Traduit le texte
     translation_next = transmute (seq, permutation_next, alphabet);
-    %teste le vraisemblance
     vraisemb_next = vraisemblance(translation_next,alphabet,pinit,Q);
     
-    %Si meilleur on garde
     if(randi(1) < 2^vraisemb_next/2^vraisemb)
     permutation = permutation_next;
     vraisemb = vraisemb_next;

@@ -1,3 +1,5 @@
+%Inutile ?
+
 function [ new_position ] = move( position , Q)
 threshold = zeros(1,length(Q(position,:)));
 total = 0;

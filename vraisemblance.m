@@ -1,3 +1,4 @@
+%Calcule la vraisemblance avec les données
 function [ result ] = vraisemblance( text,alphabet,pinit,Q )
 
 result = log2(pinit(find(alphabet == text(1),1)));

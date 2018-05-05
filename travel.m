@@ -1,3 +1,5 @@
+%Je sais plus si cette fonction est utile
+
 function [ history ] = travel( T, Q )
 N = length(Q(1,:));
 occurences = zeros(1, N);

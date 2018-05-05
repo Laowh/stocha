@@ -1,3 +1,5 @@
+%Remplace les éléments de strings par les élements correspondanr dans
+%"replace"
 function [ result ] = transmute( string, alphabet, replace )
 result = [];
 for i = 1 : length(string)

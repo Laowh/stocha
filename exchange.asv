@@ -1,4 +1,4 @@
-%Permutte les éléments en positon a et b du vecteur 
+
 function [ vector ] = exchange(vector, a, b)
 if (a ~= b)
    temp = vector(a);
