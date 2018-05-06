@@ -2,7 +2,7 @@ seq = 'h,ffksijq".ki,skdc"js"tki"kij.kb""ck]-dqkl"jqsk-ckui"khjfftkui"k],qsuku,o
 alphabet = 'abcdefghijklmnopqrstuvwxyz,.''"-!?:;()[] ';
 N = length(alphabet);
 load('pinit.mat');
-load('Q.mat')
+load('Q.mat');
 
 % file = fopen('seq.txt');
 % seq_alt = textscan(file, '%s');
