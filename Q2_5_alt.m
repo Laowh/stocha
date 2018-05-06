@@ -1,5 +1,5 @@
-seq2;
-%120 premières lettres
+seq_mic;
+
 tic;
 
 p = 1/factorial(40);
@@ -24,7 +24,7 @@ permutation = alphabet(randperm(40));
 %     
 % end
 %Nombre d'itérations
-it = 500000;
+it = 200000;
 
 %Données pour le graph
 Tab_vraisemblance_alt = [vraisemb];
