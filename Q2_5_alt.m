@@ -24,7 +24,7 @@ permutation = alphabet(randperm(40));
 %     
 % end
 %Nombre d'itérations
-it = 500000;
+it = 100000;
 
 %Données pour le graph
 Tab_vraisemblance_alt = [vraisemb];
