@@ -1,6 +1,5 @@
 seq2;
 %120 premières lettres
-seq = seq(1:120);
 tic;
 
 p = 1/factorial(40);
@@ -11,21 +10,21 @@ permutation = alphabet(randperm(40));
 
 %Tire un code aléatoirement jusqu'à avoir un code 'correct' si on change la
 %longueur de seq il faut changer la valeur dans le gardien
-while(vraisemb < -10000)
-    
-    permutation_next = alphabet(randperm(40));
-    %translation_next = transmute (seq, permutation_next, alphabet);
-    vraisemb_next = vraisemblance_alt(seq,permutation_next,pinit,Q);
-    
-    if(randi(1) < (2^(vraisemb_next - vraisemb)))
-    permutation = permutation_next;
-    vraisemb = vraisemb_next;
-    translation = transmute (seq, permutation_next, alphabet);
-    end
-    
-end
+% while(vraisemb < -10000)
+%     
+%     permutation_next = alphabet(randperm(40));
+%     %translation_next = transmute (seq, permutation_next, alphabet);
+%     vraisemb_next = vraisemblance_alt(seq,permutation_next,pinit,Q);
+%     
+%     if(randi(1) < (2^(vraisemb_next - vraisemb)))
+%     permutation = permutation_next;
+%     vraisemb = vraisemb_next;
+%     translation = transmute (seq, permutation_next, alphabet);
+%     end
+%     
+% end
 %Nombre d'itérations
-it = 5000000;
+it = 500000;
 
 %Données pour le graph
 Tab_vraisemblance_alt = [vraisemb];
