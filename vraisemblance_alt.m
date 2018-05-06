@@ -8,7 +8,7 @@ for i = 2 : length(text)
     next = find(alphabet == text(i),1);
     temp = log2(Q(previous, next));
     if(temp == -Inf)
-        temp = -1000;
+        temp = -500;
     end
     result = result + temp;
     previous = next;
