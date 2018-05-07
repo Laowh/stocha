@@ -7,6 +7,5 @@ for i = 1 : length(a)
     end
 end
 
-
 end
 

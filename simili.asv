@@ -8,11 +8,11 @@ load('Q.mat');
 
 seq = transmute(mut, alphabet, true_permutation);
 
-%seq = seq(1:500);
+seq = seq(1:20);
 alphabet = 'abcdefghijklmnopqrstuvwxyz,.''"-!?:;()[] ';
 
 
-sim = [];
+sim = [0];
 tic;
 
 p = 1/factorial(40);
@@ -40,16 +40,11 @@ while(it > 0)
 end
 figure(1);
 plot(Tab_vraisemblance_alt);
-title('Vraisemblance à chaque permutation effectuée')
-ylabel('Vraisemblance');
-xlabel('Nombre de permutations');
-saveas(figure(1),'all-1.png');
+title('Pourcentage d''apparition des différentes lettres sur une chaine de longueur T')
+ylabel('Pourcentage d''apparition');
+xlabel('Longueur de chaine T');
 figure(2);
 plot(sim);
-title('Substitutions correctes à chaque permutation effectuée')
-ylabel('Nombre de substitutions correctes');
-xlabel('Nombre de permutations');
-saveas(figure(2),'all-2.png');
 permutation
 translation
 vraisemb
