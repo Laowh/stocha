@@ -1,4 +1,5 @@
-%Je sais plus si cette fonction est utile
+%1.1.4 Effectue un voyage de T transitions entre les états avec les probas de la
+%matrice Q et dessine le graph de pourcentage d'occurrence de chaque état
 
 function [ history ] = travel( T, Q )
 N = length(Q(1,:));

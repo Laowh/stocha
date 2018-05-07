@@ -6,7 +6,7 @@ p = 1/factorial(40);
 vraisemb = -Inf;
 permutation = alphabet(randperm(40));
 
-%Permutation est une manière de coder le texte
+%permutation est une manière de coder le texte
 while(vraisemb < -90)
     %Tire une permutation au hasard
     permutation_next = alphabet(randperm(40));

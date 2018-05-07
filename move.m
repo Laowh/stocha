@@ -1,4 +1,4 @@
-%Inutile ?
+%Effectue une transition d'une position à une autre en suivant les proba de la matrice de transition donnée 
 
 function [ new_position ] = move( position , Q)
 threshold = zeros(1,length(Q(position,:)));
