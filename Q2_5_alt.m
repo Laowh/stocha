@@ -8,21 +8,6 @@ vraisemb = -Inf;
 %code aléatoire
 permutation = alphabet(randperm(40));
 
-%Tire un code aléatoirement jusqu'à avoir un code 'correct' si on change la
-%longueur de seq il faut changer la valeur dans le gardien
-% while(vraisemb < -10000)
-%     
-%     permutation_next = alphabet(randperm(40));
-%     %translation_next = transmute (seq, permutation_next, alphabet);
-%     vraisemb_next = vraisemblance_alt(seq,permutation_next,pinit,Q);
-%     
-%     if(randi(1) < (2^(vraisemb_next - vraisemb)))
-%     permutation = permutation_next;
-%     vraisemb = vraisemb_next;
-%     translation = transmute (seq, permutation_next, alphabet);
-%     end
-%     
-% end
 %Nombre d'itérations
 
 it = 100000;
