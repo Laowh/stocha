@@ -7,49 +7,57 @@ load('pinit.mat');
 load('Q.mat');
 
 seq = transmute(mut, alphabet, true_permutation);
-
-%seq = seq(1:500);
 alphabet = 'abcdefghijklmnopqrstuvwxyz,.''"-!?:;()[] ';
 
-
-sim = [];
+Nombre 
+sim = [0];
 tic;
 
 p = 1/factorial(40);
 vraisemb = -Inf;
 
-it = 100000;
+%nombre d'itérations
+it = 0;
+prev_it = 0;
 %Données pour le graph
 Tab_vraisemblance_alt = [vraisemb];
 permutation = alphabet(randperm(40));
+nb_unique = length(unique(seq));
 
 %Fait des permutations aléatoires dans le code et si meilleure vraisemblance on garde
-while(it > 0)
+while(sim(end) < 0.8* nb_unique)
    permutation_next = exchange (permutation, randi(40), randi(40)) ;
    %translation_next = transmute (seq, permutation_next, alphabet);
    vraisemb_next = vraisemblance_alt(seq,permutation_next,pinit,Q);
-    
+
    if(randi(1) < (2^(vraisemb_next - vraisemb)))
+     %On garde le nouveau code
      permutation = permutation_next;
      vraisemb = vraisemb_next;
      translation = transmute (seq, permutation_next, alphabet);
+     
+     %données graphiques
      Tab_vraisemblance_alt = [Tab_vraisemblance_alt vraisemb];
      sim = [sim common(true_permutation, permutation)];
+     prev_it = it;
    end 
-   it = it-1;
+   it = it+1;
+   %empeche de tourner indéfiniment
+   if (it > prev_it + 100000)
+       disp("no improvement after 100 000 iterations. Program stops");
+       break;
+   end
 end
 figure(1);
 plot(Tab_vraisemblance_alt);
 title('Vraisemblance à chaque permutation effectuée')
 ylabel('Vraisemblance');
 xlabel('Nombre de permutations');
-saveas(figure(1),'all-1.png');
 figure(2);
 plot(sim);
 title('Substitutions correctes à chaque permutation effectuée')
 ylabel('Nombre de substitutions correctes');
 xlabel('Nombre de permutations');
-saveas(figure(2),'all-2.png');
 permutation
 translation
 vraisemb
