@@ -6,7 +6,7 @@ seq2;
 %de la séquance initiale)
 seq_b = [];
 for i = 1 : (length(seq))
-    seq_b = [seq_b alphabet(randi(40))];
+    seq_b = [seq_b alphabet(randi([1 40]))];
 end
 
 

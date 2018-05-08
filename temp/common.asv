@@ -1,4 +1,4 @@
-%Donne le nombre d'éléments de a et b qui ont la même valeur à la même position 
+Donne 
 function [ result ] = common( a, b )
 result = 0;
 
