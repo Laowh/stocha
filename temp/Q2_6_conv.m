@@ -51,7 +51,7 @@ while(sim(end) < 0.9* nb_unique)
    it = it+1;
    %empeche de tourner indéfiniment
    if (it > prev_it + 10000)
-       disp("no improvement after 10 000 iterations. Try relaunching the program for better seed");
+       disp("10 000 iterations sans améliorations. Relancez le programme pour un meilleur départ");
        break;
    end
 end
