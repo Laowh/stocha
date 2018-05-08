@@ -1,4 +1,4 @@
-
+%Teste les deux séquences et garde la meilleure
 [seq_a,seq_b] = seq_bonus;
 
 %SEQUENCE 1

@@ -2,11 +2,13 @@ seq2;
 %Selectionne seulement les premières lettres
 seq = seq(1:40);
 
-p = 1/factorial(40);
 vraisemb = -Inf;
+
+%Premier code au hasard
+%permutation est une manière de coder le texte
 permutation = alphabet(randperm(40));
 
-%permutation est une manière de coder le texte
+%Convergence lorsque la vraisemblance =/= -Inf
 while(vraisemb == -Inf)
     %Tire une permutation au hasard
     permutation_next = alphabet(randperm(40));
