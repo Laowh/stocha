@@ -21,13 +21,14 @@ it = 0;
 
 true_permutation = 'jby."]ri,anfoc-'':qsud!h?lpwtve;[zxm)g( k';
 prev_it = 0;
-%Données pour le graph
+%Données pour le graphe
 Tab_vraisemblance_alt = [vraisemb];
 permutation = alphabet(randperm(40));
 nb_unique = length(unique(seq));
 
 %Fait des permutations aléatoires dans le code et si meilleure vraisemblance on garde
-while(sim(end) < 0.90* nb_unique)
+%While convergence not reached
+while(sim(end) < 0.9* nb_unique)
    permutation_next = exchange (permutation, randi(40), randi(40)) ;
    %translation_next = transmute (seq, permutation_next, alphabet);
    vraisemb_next = vraisemblance_alt(seq,permutation_next,pinit,Q);

@@ -13,7 +13,7 @@ permutation = alphabet(randperm(40));
 %Nombre d'itérations
 
 it = 10000;
-%Données pour le graph
+%Données pour le graphe
 Tab_vraisemblance_alt = [vraisemb];
 
 %Fait des permutations aléatoires dans le code et si meilleure vraisemblance on garde

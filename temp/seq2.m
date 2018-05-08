@@ -3,11 +3,3 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz,.''"-!?:;()[] ';
 N = length(alphabet);
 load('pinit.mat');
 load('Q.mat');
-
-% file = fopen('seq.txt');
-% seq_alt = textscan(file, '%s');
-% fclose(file);
-% 
-% seq_alt = seq_alt{1}
-% 
-% strcmp(seq, seq_alt{1})
